@@ -49,7 +49,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5002/appointments",
+        "https://ojas-aarogya-experiment.onrender.com/appointments",
         formData
       );
 
@@ -75,7 +75,6 @@ function App() {
 
   return (
     <div className="app">
-
       <header className="header">
         <div className="logo">
           <div className="logo-icon">🌿</div>
@@ -119,7 +118,6 @@ function App() {
       </section>
 
       <section className="appointment-section">
-
         <div className="section-heading">
           <p>APPOINTMENT REGISTRATION</p>
           <h2>Book Your Appointment</h2>
@@ -205,6 +203,7 @@ function App() {
                   {treatment}
                 </option>
               ))}
+
             </select>
           </div>
 
@@ -309,7 +308,9 @@ function App() {
 
       <footer>
         <h3>🌿 Ojas Aarogya Mandir</h3>
+
         <p>Ayurvedic & Panchakarma Clinic</p>
+
         <p>
           Open Daily: 10:00 AM – 1:00 PM | 5:00 PM – 9:00 PM
         </p>
