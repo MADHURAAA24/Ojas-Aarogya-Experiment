@@ -3,16 +3,22 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = 5002;
+const PORT = process.env.PORT || 5002;
 
 app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
 mongoose
-    .connect("mongodb://127.0.0.1:27017/ojas_aarogya")
-    .then(() => console.log("MongoDB connected successfully!"))
-    .catch((error) => console.log("MongoDB connection error:", error));
+    .connect(process.env.MONGO_URI, {
+        serverSelectionTimeoutMS: 10000
+    })
+    .then(() => {
+        console.log("MongoDB connected successfully!");
+    })
+    .catch((error) => {
+        console.error("MongoDB connection error:", error);
+    });
 
 // Appointment Schema
 const appointmentSchema = new mongoose.Schema({
