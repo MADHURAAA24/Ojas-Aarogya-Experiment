@@ -27,5 +27,4 @@ A full-stack web application for an Ayurvedic and Panchakarma clinic, designed t
 ### Project Status
 Successfully deployed and tested with end-to-end appointment booking and database storage.
 
----
-*Developed as part of a Web Technology practical project.*
+
